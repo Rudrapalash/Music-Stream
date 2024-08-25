@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Streaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">MusicStream</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-yellow-500">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Explore</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Library</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Music Player -->
+    <section class="container mx-auto mt-10 p-6">
+        <div id="player" class="bg-gray-800 p-6 rounded-lg flex flex-col items-center">
+            <img id="albumArt" src="https://via.placeholder.com/300" alt="Album Art" class="rounded-lg mb-4">
+            <h3 id="songTitle" class="text-2xl font-bold mb-2">Song Title</h3>
+            <p id="artistName" class="text-gray-400 mb-4">Artist Name</p>
+            <audio id="audioPlayer" controls class="w-full">
+                <source id="audioSource" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <!-- Song List -->
+    <section class="container mx-auto mt-10 p-6">
+        <h3 class="text-3xl font-bold mb-6">Available Songs</h3>
+        <div id="songsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Songs will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 mt-10">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 MusicStream. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
